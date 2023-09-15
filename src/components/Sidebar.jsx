@@ -21,7 +21,7 @@ const Sidebar = () => {
               <AiOutlineHome />
               <span className="ml-4 text-xl">Home</span>
             </li>
-            <li className="bg-[#f8e7eb] mb-3 p-5 border-r-4 border-solid border-[#be123c] flex items-center justify-center">
+            <li className="mb-3 p-5  flex items-center justify-center">
               <BiCameraMovie />
               <span className="ml-4 text-xl">Movies</span>
             </li>
