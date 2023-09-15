@@ -14,6 +14,8 @@ const Card = ({ imagePath, title, releaseDate, rating, genre }) => {
         setIsFavorite(!isFavorite);
     }
 
+    const randomRating = Math.floor(Math.random() * 101);
+
     return (
         <div className="flex flex-col relative" data-testid="movie-card">
             {/* Heart Icon */}
@@ -46,14 +48,14 @@ const Card = ({ imagePath, title, releaseDate, rating, genre }) => {
                     {title}
                 </h1>
                 {/* Rating */}
-                <div className="flex mb-3">
+                <div className="flex justify-between mb-3">
                     <div className="mr-4">
                         <img src={imdb} alt="IMDb logo" className="inline-block h-4" />
-                        <p className="inline-block text-xs ml-1">{rating}</p>
+                        <p className="inline-block text-xs ml-1">{rating}/10</p>
                     </div>
                     <div className="ml-4">
                         <img src={tomato} alt="IMDb logo" className="inline-block h-4" />{" "}
-                        <p className="inline-block text-xs">50</p>
+                        <p className="inline-block text-xs">{randomRating}%</p>
                     </div>
                 </div>
                 {/* Genre */}

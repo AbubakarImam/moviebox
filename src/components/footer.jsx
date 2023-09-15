@@ -1,21 +1,58 @@
+import { IconContext } from "react-icons";
+import {
+    AiFillFacebook,
+    AiOutlineInstagram,
+    AiOutlineTwitter,
+    AiFillYoutube,
+} from "react-icons/ai";
 
-function Footer() {
+const Footer = () => {
     return (
-        <div className="w-[492px] h-[145.43px] flex-col justify-start items-center gap-9 inline-flex">
-            <div className="justify-start items-center gap-12 inline-flex">
-                <div className="w-6 h-[27.43px] relative" />
-                <div className="w-6 h-[27.43px] relative" />
-                <div className="w-6 h-6 relative" />
-                <div className="w-6 h-[21.33px] relative" />
+        <div className="flex flex-col justify-center items-center m-12">
+            {/* Socials */}
+            <IconContext.Provider value={{ className: "w-6 h-7" }}>
+                <div className="flex justify-between w-60 mb-6">
+                    {/* Facebook */}
+                    <a href="https://github.com/AbubakarImam" >
+                        <AiFillFacebook />
+                    </a>
+                    {/* Instagram */}
+                    <a href="https://www.instagram.com" >
+                        <AiOutlineInstagram />
+                    </a>
+                    {/* Twitter */}
+                    <a href="https://twitter.com/Abubakar_Imam1">
+                        <AiOutlineTwitter />
+                    </a>
+                    {/* Youtube */}
+                    <a href="https://abubakarimam.netlify.app">
+                        <AiFillYoutube />
+                    </a>
+                </div>
+            </IconContext.Provider>
+            {/* Links */}
+            <div className="flex justify-between  w-[26rem] mb-6">
+                {/* Condition of use */}
+                <div>
+                    <h1 className="font-bold text-lg">Conditions of Use</h1>
+                </div>
+                {/* Privacy and Policy */}
+                <div>
+                    <h1 className="font-bold text-lg">Privacy &amp; Policy</h1>
+                </div>
+                {/* Press Room */}
+                <div>
+                    <h1 className="font-bold text-lg">Press Room</h1>
+                </div>
             </div>
-            <div className="justify-start items-start gap-12 inline-flex">
-                <div className="text-gray-900 text-lg font-bold">Conditions of Use</div>
-                <div className="text-gray-900 text-lg font-bold">Privacy & Policy</div>
-                <div className="text-gray-900 text-lg font-bold">Press Room</div>
+            {/* Copyright */}
+            <div>
+                <h1 className="text-lg font-[#6B7280]">
+                    &copy; 2023 MovieBox by Abubakar Imam
+                </h1>
             </div>
-            <div className="text-gray-500 text-lg font-bold">© 2021 MovieBox by Adriana Eka Prayudha  </div>
         </div>
-    )
-}
+    );
+};
 
-export default Footer
+export default Footer;

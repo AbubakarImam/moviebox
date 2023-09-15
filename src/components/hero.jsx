@@ -1,4 +1,3 @@
-import johnwick from "../assets/johnwick.png";
 import imdb from "../assets/imdb.png";
 import tomato from "../assets/tomato.png";
 import Play from "../assets/play.png";
@@ -28,7 +27,7 @@ const Hero = () => {
 
                     <p className="font-medium text-sm mb-3">
                         John Wick is on the run after killing a member of the international
-                        assassins' guild, and with a $14 million price tag on his head, he is
+                        assassins guild, and with a $14 million price tag on his head, he is
                         the target of hit men and women everywhere.
                     </p>
 
