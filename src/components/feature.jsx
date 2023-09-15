@@ -9,7 +9,7 @@ function Feature() {
 
     if (loading) {
         return (
-            <div className="loading">
+            <div className="flex justify-center">
                 <img src={Loading} alt="loading" />
             </div>
         );
@@ -22,7 +22,7 @@ function Feature() {
                 <div>
                     <h1 className="font-bold text-4xl">Featured Movie</h1>
                 </div>
-                <div><a href="#" target='_blank' className="text-[#BE123C] text-lg font-normal">See more &gt;</a></div>
+                <div><a href="#" className="text-[#BE123C] text-lg font-normal">See more &gt;</a></div>
             </div>
             {/* Grid */}
             <div className="grid gap-4 grid-cols-4">
