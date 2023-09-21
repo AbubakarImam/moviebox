@@ -4,7 +4,6 @@ const MovieDescription = ({ description }) => {
   return (
     <div className="col-span-2">
       {/* Name/release date/rating/etc */}
-
       <h1 className="mt-4 mx-4 text-xl font-bold">
         <span data-testid="movie-title">{description.title}</span> • <span data-testid="movie-release-date">{description.date}</span> •{" "}
         {description.rating} • <span data-testid="movie-runtime">{description.runtime}</span>
@@ -21,12 +20,11 @@ const MovieDescription = ({ description }) => {
       </h1>
 
       {/* description*/}
-
       <p className="mx-4 mt-4" data-testid="movie-overview">{description.overView}</p>
 
       {/* cast*/}
       <h1 className="mx-4 mt-4 font-bold text-lg">Production Companies:</h1>
-      <ul className=" px-3 mx-4 mt-4">
+      <ul className="px-3 mx-4 mt-4">
         {description?.productionCompanies?.map((des) => {
           return (
             <li className="mb-5" key={des.name}>

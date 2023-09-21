@@ -8,20 +8,21 @@ function Navbar() {
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
+
     return (
-        <nav className="flex sticky justify-between px-40 py-3">
+        <nav className="flex justify-between px-4 py-3 md:px-10 lg:px-20">
             {/* Icon */}
-            <div className="flex justify-between flex-initial">
+            <div className="flex items-center">
                 <div>
                     <img className="w-12" src={logo} alt="MovieBoxIcon" />
                 </div>
                 <div>
-                    <h1 className="text-white font-bold text-2xl my-1 mx-4">MovieBox</h1>
+                    <h1 className="text-white font-bold text-2xl ml-2 hidden md:block">MovieBox</h1>
                 </div>
             </div>
 
             {/* Search */}
-            <form className="basis-96">
+            <form className="flex-grow ml-4 hidden md:flex">
                 <div className="relative">
                     <input
                         id="suffix"
@@ -39,46 +40,43 @@ function Navbar() {
                     </div>
                 </div>
             </form>
+
             {/* Menu */}
-            <div className="flex">
-                <div>
-                    <h1 className="text-white font-bold text-base my-1 mx-4">Sign In</h1>
-                </div>
-                <div>
-                    <div className="flex items-center bg-red-500 rounded-full p-3">
-                        <button
-                            className="text-white focus:outline-none"
-                            onClick={toggleMenu}
+            <div className="flex items-center">
+                <h1 className="text-white font-bold text-base my-1 mx-4 hidden md:block">Sign In</h1>
+                <div className="flex items-center bg-red-500 rounded-full p-3 md:hidden">
+                    <button
+                        className="text-white focus:outline-none"
+                        onClick={toggleMenu}
+                    >
+                        <svg
+                            className="w-6 h-6"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
                         >
-                            <svg
-                                className="w-6 h-6"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                {isOpen ? (
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M6 18L18 6M6 6l12 12"
-                                    />
-                                ) : (
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M4 6h16M4 12h16m-7 6h7"
-                                    />
-                                )}
-                            </svg>
-                        </button>
-                    </div>
+                            {isOpen ? (
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M6 18L18 6M6 6l12 12"
+                                />
+                            ) : (
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M4 6h16M4 12h16m-7 6h7"
+                                />
+                            )}
+                        </svg>
+                    </button>
                 </div>
             </div>
         </nav>
     )
 }
 
-export default Navbar
+export default Navbar;

@@ -1,4 +1,3 @@
-
 import PropTypes from 'prop-types';
 import MovieDescription from "../components/MovieDescription";
 import { FaPlay } from 'react-icons/fa';
@@ -27,50 +26,50 @@ const ShowCaseArea = ({ details }) => {
 
   return (
     <div className="flex-1 p-8 h-screen">
-      {/* Showcase Image */}
-      <div className="col-span-3 rounded-xl relative h-[60%]">
-        <img src={imgURL} alt="display image" className="w-full h-full rounded-xl" />
+      <div className="grid grid-cols-1 gap-4">
+        {/* Showcase Image */}
+        <div className="rounded-xl relative aspect-w-16 aspect-h-9">
+          <img src={imgURL} alt="display image" className="w-full h-full rounded-xl object-cover" />
 
-        {/* Overlay with centered content */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-white">
-            <div className="py-4 px-2 rounded-full bg-opacity-50 bg-white flex justify-center items-center">
-              <FaPlay />
-            </div>
-            <div>
-              <h1 className="text-white">Watch Trailer</h1>
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-white">
+              <div className="py-4 px-2 rounded-full bg-opacity-50 bg-white flex justify-center items-center">
+                <FaPlay />
+              </div>
+              <div>
+                <h1 className="text-white">Watch Trailer</h1>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div className="flex">
-        {/* Description */}
-        <MovieDescription description={{
-          ...description,
-          runtime: formatRuntime(description.runtime)
-        }} />
-        {/* Serenre */}
-        <div className="w-full mt-4 mx-4">
-          <div className="flex items-end text-left">
-            <p className=""></p>
 
-          </div>
-          {/* Buttons */}
-          <div>
-            <button className="bg-[#BE123C] rounded-md py-2 px-4 w-full">
-              <h1 className="text-white flex items-center justify-center ">
-                <IoTicketSharp />
-                <span className="px-2">See Showtimes</span>
-              </h1>
-            </button>
+        <div className="flex flex-col">
+          {/* Description */}
+          <MovieDescription description={{
+            ...description,
+            runtime: formatRuntime(description.runtime)
+          }} />
 
-            <div className="rounded-md py-2 px-4 w-full border-[#BE123CB2] border bg-[#fcf5f7] text-center my-2 flex items-center justify-center">
-              <IoIosOptions />
-              <span className="px-2">More Watch</span>
+          {/* Genre */}
+          <div className="mt-4 mx-4">
+            <div className="flex items-end text-left">
+              <p className=""></p>
+            </div>
+            {/* Buttons */}
+            <div>
+              <button className="bg-[#BE123C] rounded-md py-2 px-4 w-full mb-2">
+                <h1 className="text-white flex items-center justify-center ">
+                  <IoTicketSharp />
+                  <span className="px-2">See Showtimes</span>
+                </h1>
+              </button>
+
+              <div className="rounded-md py-2 px-4 w-full border-[#BE123CB2] border bg-[#fcf5f7] text-center my-2 flex items-center justify-center">
+                <IoIosOptions />
+                <span className="px-2">More Watch</span>
+              </div>
             </div>
           </div>
-          {/* Images */}
-          <img src={something} alt="movie alt" />
         </div>
       </div>
     </div>
