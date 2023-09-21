@@ -10,7 +10,7 @@ function Navbar() {
     };
 
     return (
-        <nav className="flex justify-between px-4 py-3 md:px-10 lg:px-20">
+        <nav className="flex justify-between items-center px-4 py-3 md:px-10 lg:px-20">
             {/* Icon */}
             <div className="flex items-center">
                 <div>
@@ -22,8 +22,8 @@ function Navbar() {
             </div>
 
             {/* Search */}
-            <form className="flex-grow ml-4 hidden md:flex">
-                <div className="relative">
+            <form className="w-[50%] ml-4 hidden md:flex">
+                <div className="relative w-full">
                     <input
                         id="suffix"
                         className="w-full px-2 py-1 border-gray-300 border-solid border-2 rounded-md bg-transparent text-white"
